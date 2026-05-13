@@ -1,6 +1,6 @@
 services:
   web:
-    image: blupearl/quickpay:3.6
+    image: blupearl/quickpay:3.7
 
 
     container_name: quickpay-web
