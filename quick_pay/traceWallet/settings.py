@@ -87,14 +87,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         # if I want to use another database I can change the last part of the engine
-        'NAME': os.getenv("DB_NAME"),
-        "USER" : os.getenv("DB_USER"),
-        "PASSWORD" : os.getenv("DB_PASSWORD"),
-        "HOST" : os.getenv("DB_HOST"),
-        "PORT" : os.getenv("DB_PORT"),
-
-
+        'NAME': os.environ.get('DB_NAME', 'quickpay'),  # Providing 'quickpay' as a fallback
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'your_password'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
+
+
 }
 
 
