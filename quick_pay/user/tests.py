@@ -63,7 +63,7 @@ class TestLogin(TestCase):
 
     def test_login_returns_400(self):
         login_data = {
-            "email": "abdbasitegberongbe.com",
+            "email": "",
             "password": "invalid password",
         }
         response = self.client.post(self.url_login, login_data, format="json")
