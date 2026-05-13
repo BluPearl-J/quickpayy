@@ -37,7 +37,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install dependencies
+      - name: Force Install dependencies
         #run: uv pip install --system .
         run: |
           uv pip install --system django djangorestframework
@@ -51,7 +51,7 @@ jobs:
           DB_HOST: localhost
           DB_PORT: 5432
           SECRET_KEY: test_secret_key
-        run: uv run python quick_pay/manage.py test
+        run: python quick_pay/manage.py test
         
 
   build-and-push:
