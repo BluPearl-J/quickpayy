@@ -39,7 +39,9 @@ jobs:
 
       - name: Install dependencies
         #run: uv pip install --system .
-        run: uv sync
+        run: |
+          uv pip install --system django djangorestframework
+          uv pip install --system .
 
       - name: Run Tests
         env:
