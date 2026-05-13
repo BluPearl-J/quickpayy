@@ -38,7 +38,8 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: uv pip install --system .
+        #run: uv pip install --system .
+        run: uv sync
 
       - name: Run Tests
         env:
@@ -48,9 +49,7 @@ jobs:
           DB_HOST: localhost
           DB_PORT: 5432
           SECRET_KEY: test_secret_key
-        run: |
-            export PYTHONPATH=$PYTHONPATH:$(pwd)
-            python quick_pay/manage.py test
+        run: uv run python quick_pay/manage.py test
         
 
   build-and-push:
