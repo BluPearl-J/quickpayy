@@ -1,6 +1,6 @@
 services:
   web:
-    image: blupearl/quickpay:3.5
+    image: blupearl/quickpay:3.6
 
 
     container_name: quickpay-web
@@ -25,3 +25,6 @@ services:
 
 volumes:
   postgres_data:
+
+
+

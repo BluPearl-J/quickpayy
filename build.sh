@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-IMAGE_TAG="blupearl/quickpay:3.5"
+IMAGE_TAG="blupearl/quickpay:3.6"
 DOCKER_USER="blupearl"
 
 echo " Checking Docker Hub Authentication..."
