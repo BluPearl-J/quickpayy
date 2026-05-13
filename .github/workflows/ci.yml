@@ -49,9 +49,10 @@ jobs:
           DB_PORT: 5432
           SECRET_KEY: test_secret_key
         run: |
-          #python quick_pay/manage.py test
-          cd quick_pay
-          python manage.py test
+            export PYTHONPATH=$PYTHONPATH:$(pwd)
+            python quick_pay/manage.py test
+        
+
   build-and-push:
     needs: test
     runs-on: ubuntu-latest

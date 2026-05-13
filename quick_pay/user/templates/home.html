@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trace Wallet</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #121212; color: white; padding-top: 50px; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h1 { color: #f1c40f; }
+        button { background: #3498db; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 15px; }
+        button:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Welcome to Quickpay wallet</h1>
+    <p>Your secure fin-tech gateway to land transactions in Lagos.</p>
+    <button onclick="location.href='{% url 'login' %}'">Go to Login</button>
+</div> <!-- Added this closing div -->
+</body>
+</html>
