@@ -1,0 +1,14 @@
+.venv
+.env
+.git
+.gitignore
+.idea
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+dockerfile
+docker-compose.yml
+README.md
+build.sh
