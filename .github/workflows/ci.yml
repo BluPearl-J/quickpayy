@@ -40,7 +40,7 @@ jobs:
       - name: Force Install dependencies
         #run: uv pip install --system .
         run: |
-          uv pip install --system django djangorestframework
+          uv pip install --system django djangorestframework djangorestframework-simplejwt
           uv pip install --system .
 
       - name: Run Tests
