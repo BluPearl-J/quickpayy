@@ -21,8 +21,6 @@ admin.site.site_header = 'Trace Wallet'
 admin.site.site_title = 'Trace admin Portal'
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path("user/", include("user.urls")),
-    path("wallet/",include("wallet.urls")),
     path('', include("user.urls")),
+    path("wallet/",include("wallet.urls")),
 ]
